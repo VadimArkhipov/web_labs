@@ -1,0 +1,85 @@
+body {
+    background-color: mintcream;
+    font-family: Jura;
+    font-size: 20pt;
+}
+
+.tetris-page {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-family: "Jura";
+    text-align: center;
+    font-size: 35pt;
+    color: black;
+}
+
+.links-start-page {
+    font-family: "Jura";
+    font-size: 30pt;
+    text-align: center;
+    color: black;
+}
+
+.links-return {
+    font-family: "Jura";
+    font-size: 20pt;
+    text-align: left;
+    color: black;
+}
+
+input[type="text"] {
+    margin: 0;
+    font-family: "Jura";
+    font-size: 25pt;
+    background-color: mintcream;
+    color: black;
+    size: 29pt;
+    text-align: center;
+}
+ button {
+     background: #1cd3a2;
+ }
+
+.record-table {
+    font-family: "Jura";
+    font-size: 30px;
+    align-items: center;
+    align-content: center;
+    width: 500px;
+    margin: 0 auto;
+    color: black;
+}
+.record-table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #1cd3a2;
+    border: 1px solid #000000;
+}
+.record-table td {
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+.tetris-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 640px;
+    position: relative;
+}
+
+.cup {
+    padding-left: 39.5%;
+}
+
+.btn {
+    bottom: 200px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+

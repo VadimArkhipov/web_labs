@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta charset="utf-8">
+    <title>Start page</title>
+</head>
+<body>
+<h1> Tetris </h1>
+<br></br>
+<form class="links-start-page" action="game_page.html" method="get">
+    <label class="links-start-page"> Введите имя игрока </label>
+    <br>
+    <input type="text"  name="player_name" required>
+    <br><br>
+    <button class="links-start-page" type="submit" onclick="submitButtonPressed()">Начать игру</button>
+</form>
+
+<form class="links-start-page" action="record_table_page.html" , method="get">
+    <br>
+    <button class="links-start-page" type="submit"> Таблица рекордов </button>
+
+</form>
+
+<script src="../src/start_page.js"></script>
+</body>
+</html>
