@@ -1,0 +1,150 @@
+.start-select {
+    width: 250px;
+    text-align: center;
+    margin: 8px auto;
+    background: #1cd3a2;
+    color: black;
+    font-size: 22px;
+    font-family: Jura;
+}
+
+option {
+    font-size: 22px;
+    background: mintcream;
+    color: black;
+}
+
+label {
+    text-align: center;
+    font-size: 22px;
+}
+
+.start-trading {
+    text-align: center;
+}
+
+.shift-speed {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.shift-input {
+    width: 100px;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 22px;
+}
+
+.choose-table {
+    display: table;
+    width: 500px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+button {
+    width: 125px;
+    height: 40px;
+    font-size: 22px;
+    background: lightgrey;
+    border: none;
+}
+
+button:hover{
+    background: #98ff98;
+}
+
+.chosen, .chosen:hover {
+    background: olivedrab;
+    color: white;
+    font-weight: bold;
+}
+
+/*.chosen:hover {*/
+/*    background: crimson;*/
+/*}*/
+
+@media screen and (max-width: 550px) {
+    .choose-table {
+        width: 100%;
+    }
+
+    .set {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .cell {
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .choose-table {
+        width: 100%;
+    }
+
+    .set {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .cell {
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .choose-table {
+        width: 100%;
+    }
+
+    .set {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .cell {
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .choose-table {
+        width: 100%;
+    }
+
+    .set {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .cell {
+        width: calc(100% / 4);
+    }
+}
+

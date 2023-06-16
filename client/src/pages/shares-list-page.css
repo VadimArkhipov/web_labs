@@ -1,0 +1,49 @@
+.choose-table {
+    display: table;
+    width: 500px;
+    padding-top: 50px;
+    margin: 30px auto;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 40px;
+
+}
+
+.cell button {
+    width: 125px;
+    height: 40px;
+    font-size: 22px;
+    border: none;
+    border-radius: 40px;
+    background-color: #1cd3a2;
+    font-family: Jura;
+}
+
+.share:hover {
+    background: #98ff98;
+
+}
+
+.chosen {
+    background: peachpuff;
+    color: white;
+    font-weight: bold;
+}
+
+.cell button.chosen{
+    background-color: mediumspringgreen;
+}
+
+.cell button.chosen:hover{
+    background-color: gray;
+}

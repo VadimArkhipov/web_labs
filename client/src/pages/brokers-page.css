@@ -1,0 +1,118 @@
+.add-form {
+    width: 700px;
+    height: 240px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.add {
+    margin-top: 15px;
+    font-size: 20px;
+    height: 35px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-self: center;
+    background: #1cd3a2;
+    font-family: Jura;
+}
+
+.add:hover {
+    background: #98ff98;
+    transition: all 0.3s ease-in-out;
+}
+
+.balance-input {
+     margin-top: 5px;
+}
+
+input {
+    width: 400px;
+    height: 25px;
+    padding-left: 8px;
+    font-size: 17px;
+    font-family: Jura;
+}
+
+label {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 750px) {
+    .add-form {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .add-form {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .add-form {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .add-form {
+        width: 100vw;
+    }
+
+    .balance-input {
+        width: 100%;
+    }
+
+    .name-input {
+        width: 100%;
+    }
+
+    input {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100% - 20px - 8px - 10px);
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .add-form {
+        width: 100vw;
+    }
+
+    .balance-input {
+        width: 100%;
+    }
+
+    .name-input {
+        width: 100%;
+    }
+
+    input {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100% - 20px - 8px - 10px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .add-form {
+        width: 100vw;
+    }
+
+    .balance-input {
+        width: 100%;
+    }
+
+    .name-input {
+        width: 100%;
+    }
+
+    input {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100% - 20px - 8px - 10px);
+    }
+}

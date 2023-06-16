@@ -1,0 +1,26 @@
+.trading {
+    margin-top: 15px;
+    font-size: 28px;
+    height: 35px;
+    width: 260px;
+    align-self: center;
+    background: #1cd3a2;
+    border: 1px solid black;
+    font-family: Jura;
+}
+
+.trading:hover {
+    background: #98ff98;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-wrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trading-ended {
+    margin: 38vh auto;
+    text-align: center;
+    font-size: 40px;
+}
