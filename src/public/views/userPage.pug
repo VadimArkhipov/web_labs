@@ -1,0 +1,26 @@
+include header
+
+block content
+    .user-page-info-container
+        .user-page-photo
+            a.return-user-page(href='/users') <Назад
+            br
+            img.user-page-image(src=`/userPics/${user.photo}`)
+        .user-page-info
+            p #{user.name}
+            -let birthdate = new Date(user.birth);
+            p #{birthdate.getDate()}.#{birthdate.getMonth()+1}.#{birthdate.getFullYear()}
+            p #{user.email}
+
+        .user-page-buttons
+            button(type='button')
+                a(href = `/users/${user.id}/edit`)
+                    i.fa.fa-cogs.fa-2x.button.watch-user
+            br
+            button(type='button')
+                a(href = `/users/${user.id}/friends`)
+                    i.fa.fa-users.fa-2x.button.watch-user
+            br
+            button(type='button')
+                a(href = `/users/${user.id}/friends/news`)
+                    i.fa.fa-newspaper-o.fa-2x.button.watch-user

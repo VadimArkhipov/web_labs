@@ -1,0 +1,206 @@
+#colors {
+  color: #979aab;
+  color: #10394d;
+  color: #10597c;
+  color: #1baab8;
+  color: #a3cfd2;
+  color: #dee3e7;
+  color: #1cd3a2;
+  color: #98ff98;
+}
+body {
+  background-color: mintcream;
+  font-family: Jura;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.links-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20pt;
+}
+
+
+.link-header {
+  font-size: 20px;
+  padding: 5pt;
+  border: black solid 2px;
+  margin-right: 15pt;
+  margin-left: 15pt;
+  background-color: #1cd3a2;
+}
+
+.link-header a,
+.link-header a:active,
+.link-header a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+.link-header:hover{
+  text-decoration: none;
+  background-color: #98ff98;
+  color: black;
+}
+
+.p2-header{
+  font-weight: bold;
+  font-size: 30pt;
+}
+
+th, td, tr, table {
+  border: solid black 1px;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+tbody, thead {
+  font-size: 15pt;
+}
+
+img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+}
+
+.button {
+  border: 1px solid black;
+  background-color: #1cd3a2;
+  color: black;
+  padding: 5pt;
+}
+
+.fa-trash {
+  background-color: crimson;
+}
+
+i.watch-user:hover{
+  color: white;
+}
+
+i.delete-user:hover{
+  color: white;
+}
+
+button.watch-user,
+button.delete-user{
+  padding: 0;
+  border: 0;
+}
+
+.create-user-form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.create-user-form{
+  border: 2px solid black;
+  background-color: #1cd3a2;
+  width: 450px;
+}
+
+.create-user-form-elem{
+  padding: 10px;
+  font-size: 25px;
+}
+
+.create-user-form-input{
+  font-size: 25px;
+  font-family: Jura;
+  font-weight: bold;
+  margin-top: 5px;
+  background-color: mintcream;
+}
+.create-user-form-input:not([type = 'date'], select, button){
+  width: 95%;
+}
+
+button.create-user-form-input:hover{
+  background-color: #98ff98;
+}
+
+.fill-all-inputs {
+  margin: 15px;
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+a.return,
+a.return:visited,
+a.return:active {
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: mintcream;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+}
+
+a.return:hover {
+  text-decoration: none;
+  background-color: #98ff98;
+  color: black;
+}
+
+.user-page-image{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.user-page-info p{
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.return-user-page,
+.return-user-page:active,
+.return-user-page:visited{
+  background-color: #1cd3a2;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  font-size: 20px;
+  position: relative;
+  width: 70px;
+}
+
+.return-user-page:hover{
+  text-decoration: none;
+  color: black;
+  background-color: #98ff98;;
+}
+
+.user-page-buttons button{
+  padding: 0;
+  border: 0;
+  margin: 10px;
+}
+
+.user-page-info-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-page{
+  display: flex;
+  flex-direction: column;
+}

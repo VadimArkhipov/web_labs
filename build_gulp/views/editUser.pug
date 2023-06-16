@@ -1,0 +1,38 @@
+include header.pug
+block content
+    .create-user-form-container
+        form.create-user-form#edit
+            .create-user-form-elem
+                a.return(href=`/users/${user.id}`) <Назад
+            .create-user-form-elem
+                label(for='userName') Имя пользователя:
+                br
+                input.create-user-form-input(type = 'text', name = 'userName', id = 'userName', value=`${user.name}`)
+            .create-user-form-elem
+                label(for='birth') Дата рождения:
+                br
+                - let birthdate = new Date(user.birth);
+                input.create-user-form-input(type='date', name='birth', id='birth', value = user.birth)
+            .create-user-form-elem
+                label(for='email') Адрес электронной почты:
+                br
+                input.create-user-form-input(type='text', name='email', id='email', value=`${user.email}`)
+            .create-user-form-elem
+                label(for='role') Роль:
+                br
+                select.create-user-form-input(name='role', id='role')
+                    option(value='user', selected=(user.role === 'user')) Пользователь
+                    option(value='admin', selected=(user.role === 'admin')) Администратор
+            .create-user-form-elem
+                label(for = 'status') Статус профиля:
+                br
+                select.create-user-form-input(name='status', id='status')
+                    option(value='active', selected=(user.status === 'active')) Активный
+                    option(value='blocked', selected=(user.status === 'blocked')) Заблокированный
+                    option(value='waiting', selected=(user.status === 'waiting')) Ожидает верификации
+            .create-user-form-elem
+                button.create-user-form-input(type='button') Обновить
+
+script(src='gulp/scripts/scripts.js')
+
+

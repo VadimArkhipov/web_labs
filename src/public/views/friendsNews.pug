@@ -1,0 +1,21 @@
+include header.pug
+
+block content
+    .friends-news
+        a(href=`/users/${userId}`) <Назад
+        if news.length === 0
+            p У друзей пользователя на данный момент нет новостей
+        else
+            .news-container
+                for post in news
+                    - let friend = friends.find(user => user.id === post.id)
+                    - let postTime = new Date(post.time);
+                    .post-container
+                        .photo-name-date
+                            .photo
+                                img(src=`/userPics/${friend.photo}`)
+                            .name-date
+                                p #{friend.name}
+                                p #{postTime.getDate()}-#{postTime.getMonth()+1}-#{postTime.getFullYear()} #{postTime.toLocaleTimeString()}
+                        .post-text
+                            p #{post.message}

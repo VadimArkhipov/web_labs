@@ -1,0 +1,32 @@
+include header.pug
+block content
+    .create-user-form-container
+        form.create-user-form
+            .create-user-form-elem
+                a.return(href='/users') <Назад
+            .create-user-form-elem
+                label(for='userName') Введите имя пользователя:
+                br
+                input.create-user-form-input(type = 'text', name = 'userName', id = 'userName')
+            .create-user-form-elem
+                label(for='birth') Выберите дату рождения:
+                br
+                input.create-user-form-input(type='date', name='birth', id='birth')
+            .create-user-form-elem
+                label(for='email') Введите адрес электронной почты:
+                br
+                input.create-user-form-input(type='text', name='email', id='email')
+            .create-user-form-elem
+                label(for='role') Укажите роль:
+                br
+                select.create-user-form-input(name='role', id='role')
+                    option(value='user') Пользователь
+                    option(value='admin') Администратор
+            .create-user-form-elem
+                button.create-user-form-input(type='button', onclick='addNewUser()') Добавить
+
+    script(src='/scripts/jquery.js')
+    script(src='/scripts/createUser.js')
+
+
+

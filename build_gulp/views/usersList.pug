@@ -1,0 +1,47 @@
+include header.pug
+
+
+block content
+    table.users
+        thead
+            tr
+                th Фото
+                th ФИО
+                th Дата рождения
+                th E-mail
+                th Роль
+                th Статус
+                th Посмотреть профиль
+                th Удалить профиль
+        for user in users
+            -
+                let birthdate = new Date(user.birth);
+                let role = (user.role === 'user'? 'Пользователь' : 'Администратор');
+                let status = 'пп';
+                if(user.status === 'active'){
+                    status = 'Активный';
+                }
+                else if(user.status === 'blocked'){
+                    status = 'Заблокированный'
+                }
+                else{
+                    status = 'Не подтвержденный'
+                }
+
+            tbody
+                tr
+                    td
+                        img(src=`/userPics/${user.photo}`)
+                    td #{user.name}
+                    td #{birthdate.getDate()}.#{birthdate.getMonth()+1}.#{birthdate.getFullYear()}
+                    td #{user.email}
+                    td #{role}
+                    td #{status}
+                    td
+                        button.watch-user(type='button')
+                            a(href=`/users/${user.id}`)
+                                i.fa.fa-eye.fa-2x.button.watch-user
+                    td
+                        button.delete-user(type= 'button', onclick=`deleteUser(${user.id});`)
+                            i.fa.fa-trash.fa-2x.button.delete-user
+script(src='gulp/scripts/scripts.js')

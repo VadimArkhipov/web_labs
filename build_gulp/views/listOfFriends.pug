@@ -1,0 +1,15 @@
+include header.pug
+
+block content
+    .list-of-friends
+        a(href=`/users/${userId}`) <Назад
+        if friends.length === 0
+            p У данного пользователя нет друзей
+        .friends-card
+            if friends.length !== 0
+                for friend in friends
+                    .friend-card
+                        img(src=`/userPics/${friend.photo}`)
+                        br
+                        a(href=`/users/${friend.id}`) #{friend.name}
+
