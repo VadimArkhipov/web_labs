@@ -1,0 +1,23 @@
+include heading.pug
+
+block content
+    table
+        tr
+            th Название
+            th Автор
+            th О книге
+            th Удалить
+            th Посмотреть
+        for book in books
+            tr
+                td #{book.title}
+                td #{book.author}
+                td #{book.description}
+                td.icon
+                    button.delete(onclick=`confirmDelete(${book.id}, '${book.title}')`)
+                        i.fa.fa-trash
+                td.icon
+                    a.watch(href=`/books/${book.id}`)
+                        i.fa.fa-eye
+
+script(src="/public/scripts/index.js")

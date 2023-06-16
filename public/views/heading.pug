@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        link(rel="stylesheet" type="text/css" href="/public/css/style.css")
+        link(rel="stylesheet" href="public/css/font-awesome-4.7.0/css/font-awesome.min.css")
+        title=title
+
+        .header
+            h2.header-block Библиотека
+            .header-right
+                .header-block
+                    form.addbook(action="/books/create")
+                        input.btn-new(type="submit" value="Добавить книгу")
+                .header-block
+                    form#sort-form
+                        label Показать книги
+                        select(name="stateOfSort", id="state_select")
+                            option(value="all", selected=(state==="all")) Все
+                            option(value="in_place", selected=(state==="in_place")) В наличии
+                            option(value="issued", selected=(state==="issued")) Выданные
+
+    block content

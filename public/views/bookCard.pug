@@ -1,0 +1,58 @@
+include heading
+block content
+    .form-container
+        form.create(action=`/books/${book.id}` method="POST")
+            .form-create-elem-watch
+                button(type="button" onclick='goBack()') <Назад
+            .form-create-elem-watch
+                label(for="title") Название книги
+                    br
+                    input.create(type="text", id="title", name="title", required, value=book.title)
+                    br
+            .form-create-elem-watch
+                label(for="author") Автор книги
+                    br
+                    input.create(type="text", id="author", name="author", required, value=book.author)
+                    br
+            .form-create-elem-watch
+                label(for="description") Описание книги
+                    br
+                    textarea.create(id="description", name ='description', required) #{book.description}
+            .form-create-elem-watch
+                -
+                    let str = book.issued ? 'Выдана' : 'Не выдана'
+                label Состояние книги: #{str}
+            .form-create-elem-watch
+                button(type='submit') Изменить книгу
+                if(str ==="Не выдана")
+                    button.openModal(type='button') Выдать книгу
+                else
+                    button.openModal(type='button') Информация о читателе
+
+    if(str ==="Не выдана")
+        dialog.modalAssign
+            form(action=`/books/${book.id}/assign`, method="post")
+                .form-create-elem
+                    button.closeModal(type="button") <Закрыть
+                .form-create-elem
+                    label(for="readerName") Введите имя читателя
+                        br
+                        input.create(type="text", name="readerName", id="readerName", required)
+                        br
+                .form-create-elem
+                    button(type="submit") Выдать книгу читателю
+    else
+        dialog.modalAssign
+            .form-create-elem
+                button.closeModal(type="button") <Закрыть
+            p Имя читателя: #{book.reader}
+            -
+                let date = new Date(book.date_of_issue);
+            p Дата выдачи книги: #{date.getDate()}.#{date.getMonth()+1}.#{date.getFullYear()}
+            form.create-get-over(action=`/books/${book.id}/get_over`, method='get')
+                .form-create-elem
+                    button(type="submit") Вернуть книгу
+
+
+
+script(src='/public/scripts/book.js')

@@ -1,0 +1,28 @@
+include heading
+
+script(src="/public/scripts/create.js")
+
+block content
+    title=title
+    .form-container
+        form.create(action="/books" method="POST")
+            .form-create-elem
+                button(type="button" onclick='goBack()') <Назад
+            .form-create-elem
+                label(for="title") Введите название книги
+                    br
+                    input.create(type="text", id="title", name="title", required)
+                    br
+            .form-create-elem
+                label(for="author") Введите автора книги
+                    br
+                    input.create(type="text", id="author", name="author", required)
+                    br
+            .form-create-elem
+                label(for="description") Добавьте описание книги
+                    br
+                    textarea.create(id="description", name ='description', required)
+            .form-create-elem
+                button(type='submit') Добавить книгу
+
+
