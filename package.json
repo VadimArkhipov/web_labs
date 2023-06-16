@@ -1,0 +1,17 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --prefix server && cp -R server/src/json-storage server/dist",
+    "start": "concurrently \"npm run start:prod --prefix server\" \"npm run serve --prefix client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^107.0.3",
+    "concurrently": "^7.5.0",
+    "selenium-webdriver": "^4.6.1"
+  }
+}
