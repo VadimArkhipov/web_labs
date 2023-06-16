@@ -1,0 +1,19 @@
+<div class="list-of-friends">
+  <a [href]="'users/' + id">
+    &#60;Назад
+  </a>
+
+  <p *ngIf="friends.length === 0">
+      У данного пользователя нет друзей
+    </p>
+  <div class="friends-card" >
+    <div class="friend-card" *ngFor="let friend of friends">
+      <img [src] = "'https://127.0.0.1:7000/' + friend.photo">
+      <br>
+      <a [href] = "'users/' + friend.id">
+        {{friend.name}}
+      </a>
+    </div>
+  </div>
+
+</div>

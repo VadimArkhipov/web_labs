@@ -1,0 +1,145 @@
+.friends-news {
+  margin-top: 50px;
+  min-width: 200px;
+  max-width: 700px;
+  min-height: 100px;
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid black;
+  background-color: #1cd3a2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title{
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  font-style: italic;
+  padding: 10px;
+}
+
+.friends-news > p {
+  text-align: center;
+  font-size: 35pt;
+}
+
+.post-container {
+  margin: 10px;
+  border: 2px solid black;
+  background-color: mintcream;
+  min-width: 400px;
+}
+
+.photo-name-date {
+  display: inline-flex;
+}
+
+.photo-name-date {
+  display: inline-flex;
+}
+.photo {
+  margin: 10px;
+}
+.photo img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.name-date {
+  margin: 10px;
+  font-size: 20pt;
+}
+.name-date > p {
+  margin-top: 0;
+}
+.post-text {
+  text-align: center;
+  font-size: 30pt;
+  padding: 5px;
+}
+.post-text > p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.alert {
+  border: 2px solid black;
+  background-color: mistyrose;
+  color: black;
+  border-radius: 10px;
+  width: fit-content;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: large;
+  margin: auto;
+}
+
+.create-user-form-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.create-user-form-elem {
+  padding: 10px;
+  font-size: 25px;
+}
+
+.create-user-form-input {
+  font-size: 25px;
+  font-family: Jura;
+  font-weight: bold;
+  margin-top: 5px;
+  background-color: mintcream;
+}
+.create-user-form-input:not([type = 'date'], select, button) {
+  width: 95%;
+}
+button.create-user-form-input:hover {
+  background-color: #98ff98;
+}
+
+
+
+.create-user-form {
+  border: 2px solid black;
+  background-color: #1cd3a2;
+  width: fit-content;
+  min-width: 450px;
+}
+
+a.return,
+a.return:visited,
+a.return:active {
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: mintcream;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+}
+a.return:hover {
+  text-decoration: none;
+  background-color: #98ff98;
+  color: black;
+}
+
+.create-user-form-elem button{
+  background-color: mintcream;
+  font-family: Jura;
+  padding: 0;
+}
+
+.create-user-form-elem button:hover{
+  background-color: #98ff98;
+}
+
+

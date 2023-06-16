@@ -1,0 +1,69 @@
+<div class="create-user-form-container">
+  <div class="create-user-form">
+
+    <div class="create-user-form-elem">
+      <a class="return" [href] = "'users/' + user.id">
+        &#60;Назад
+      </a>
+    </div>
+
+
+    <div class="create-user-form-elem">
+      <label for="userName"> Фото профиля </label>
+      <br>
+      <input class="create-user-form-input" type="file" (change)="uploadImage($event)" accept="image/jpeg,image/png" name="photo">
+      <button class="create-user-form-input" (click)="deletePhoto()">Удалить текущую фотографию</button>
+    </div>
+
+    <div class="create-user-form-elem">
+      <label for="userName"> Имя пользователя </label>
+      <br>
+      <input class="create-user-form-input" type="text" name="userName" id="userName" [(ngModel)]="user.name" required #name="ngModel" [ngModelOptions]="{standalone: true}">
+      <div [hidden]="name.valid || name.untouched" class="alert">
+        Не указано имя
+      </div>
+    </div>
+
+    <div class="create-user-form-elem">
+      <label for="birth"> Дата рождения </label>
+      <br>
+      <input class="create-user-form-input" type = 'date' name="birth" id="birth" [(ngModel)]="user.birth" required #birth="ngModel" [ngModelOptions]="{standalone: true}">
+      <div [hidden]="birth.valid || birth.untouched" class="alert">
+        Не указана дата рождения
+      </div>
+    </div>
+
+    <div class="create-user-form-elem">
+      <label for="email"> Адрес электронной почты </label>
+      <br>
+      <input class="create-user-form-input" type="email" id="email" [(ngModel)]="user.email" required #email="ngModel" [ngModelOptions]="{standalone: true}">
+      <div [hidden]="email.valid || email.untouched" class="alert">
+        Не указан адрес электронной почты
+      </div>
+    </div>
+
+    <div *ngIf="activeUserRole==='admin'" class="create-user-form-elem">
+      <label for="role"> Роль </label>
+      <br>
+      <select  class="create-user-form-input" name="role" id="role" [(ngModel)]="user.role" required [ngModelOptions]="{standalone: true}">
+        <option value="user"> Пользователь </option>
+        <option value="admin"> Администратор </option>
+      </select>
+    </div>
+
+    <div *ngIf="activeUserRole==='admin'" class="create-user-form-elem">
+      <label for="status"> Статус профиля </label>
+      <br>
+      <select class="create-user-form-input" name="status" id="status" [(ngModel)]="user.status" required [ngModelOptions]="{standalone: true}">
+        <option value="active"> Активный </option>
+        <option value="blocked" > Заблокированный </option>
+        <option value="waiting" > Ожидает подтверждения </option>
+      </select>
+    </div>
+
+  <div class="create-user-form-elem">
+    <button class="create-user-form-input" [disabled]="name.invalid || email.invalid || birth.invalid"  (click)="updateUser()"> Обновить данные о пользователе</button>
+  </div>
+  </div>
+  </div>
+

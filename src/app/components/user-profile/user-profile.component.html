@@ -1,0 +1,41 @@
+<div class="user-page-info-container">
+  <div class ='user-page-photo'>
+    <a *ngIf="role==='admin'" class="return-user-page" href="users" >
+      &#60;Назад
+    </a>
+    <br>
+    <img class="user-page-image" [src] = "'https://127.0.0.1:7000/' + photo">
+  </div>
+
+  <div class="user-page-info">
+    <p> {{name}}</p>
+    <p> {{birth}} </p>
+    <p>{{email}}</p>
+  </div>
+
+  <div class="user-page-buttons">
+    <button type="button">
+      <a [href]= "'users/' + id + '/edit'" >
+        <i class="fa fa-cogs fa-2x button watch-user"> </i>
+      </a>
+    </button>
+    <br>
+
+    <button type="button">
+      <a [href]= "'users/' + id + '/friends'" >
+        <i class="fa fa-users fa-2x button watch-user"> </i>
+      </a>
+    </button>
+    <br>
+
+    <button type="button">
+      <a [href]= "'users/' + id + '/friends/news'" >
+        <i class="fa fa-newspaper-o fa-2x button watch-user"> </i>
+      </a>
+    </button>
+  </div>
+</div>
+
+<app-news [photo]="photo" [name] = 'name' [userID]="id"></app-news>
+
+

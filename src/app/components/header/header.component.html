@@ -1,0 +1,12 @@
+
+
+
+
+
+<div class="header-container" xmlns="http://www.w3.org/1999/html">
+  <h1>Социальная сеть</h1>
+  <div *ngIf="this.user.role==='admin'">
+    <a href="users/create"> <button> Добавить пользователя </button></a>
+    <a href="users"> <button> Список пользователей </button></a>
+  </div>
+</div>

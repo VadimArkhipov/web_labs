@@ -1,0 +1,40 @@
+<div class="create-user-form-container" *ngIf="activeUserId==userID">
+  <div class="create-user-form" >
+    <div class="create-user-form-elem">
+      <label for="post">Расскажите, что у вас нового</label>
+      <br>
+      <textarea class="create-user-form-input" id="post" [(ngModel)]="this.description" ></textarea>
+    </div>
+
+    <div class="create-user-form-elem">
+      <button class="create-user-form-elem" (click)="sendPost()">Поделиться</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="friends-news">
+  <p *ngIf="news.length === 0">
+  На данный момент пользователь не опубликовал ни одной новости</p>
+  <p class="title" *ngIf="news.length !== 0">Новости пользователя</p>
+
+  <div class="news-container" *ngFor="let post of news">
+    <div class="post-container">
+      <div class="photo-name-date">
+        <div class="photo">
+          <img [src] = "'https://127.0.0.1:7000/' + photo">
+        </div>
+        <div class="name-date">
+          <p>{{name}}</p>
+          <p>{{post.prettyDate}}</p>
+        </div>
+        </div>
+      <div class="post-text">
+        <p>{{post.description}}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+

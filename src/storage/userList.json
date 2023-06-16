@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "name": "Вадим",
+    "birth": "2002-11-30",
+    "email": "arkhipov_vadim@inbox.ru",
+    "photo": "0.jpg",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "id": 1,
+    "name": "Бодунов Пётр",
+    "birth": "2002-05-14",
+    "email": "pbod@list.ru",
+    "photo": "1.jpg",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "Майли Сайрус",
+    "birth": "1992-11-23",
+    "email": "cyrus@gmail.com",
+    "photo": "2.png",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "name": "Анатолий Денежный",
+    "birth": "2002-07-17",
+    "email": "forest-chan@gmail.com",
+    "photo": "3.jpg",
+    "role": "user",
+    "status": "waiting"
+  },
+  {
+    "id": 4,
+    "name": "Владислав Болкунов",
+    "birth": "2002-10-08",
+    "email": "vladick@mail.ru",
+    "photo": "default.jpg",
+    "role": "user",
+    "status": "waiting"
+  },
+  {
+    "id": 5,
+    "name": "Майкл Майерс",
+    "birth": "1982-04-17",
+    "email": "imgonnakillyou@list.ru",
+    "photo": "5.jpg",
+    "role": "user",
+    "status": "blocked"
+  },
+  {
+    "id": 6,
+    "name": "Лори Строуд",
+    "birth": "1980-04-13",
+    "email": "strode@icloud.com",
+    "photo": "6.jpg",
+    "role": "user",
+    "status": "waiting"
+  },
+  {
+    "id": 7,
+    "name": "Стефани Джерманотта",
+    "birth": "1986-03-28",
+    "email": "SantoStefano@bk.ru",
+    "photo": "7.jpg",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "id": 8,
+    "name": "Мирон Фёдоров",
+    "birth": "1987-08-27",
+    "email": "oxyzmiron@mail.ru",
+    "photo": "8.jpg",
+    "role": "user",
+    "status": "waiting"
+  },
+  {
+    "id": 10,
+    "name": "Джилл Робертс",
+    "birth": "1996-04-10",
+    "email": "roberts@mail.ru",
+    "photo": "10.jpg",
+    "role": "user",
+    "status": "blocked"
+  }
+]

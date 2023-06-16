@@ -1,0 +1,26 @@
+
+<div class="friends-news">
+  <a [href] = "'users/' + id">
+    &#60;Назад
+  </a>
+  <p *ngIf="news.length === 0">
+    У друзей пользователя на данный момент нет новостей
+  </p>
+  <div class="news-container" *ngFor="let post of news">
+    <div class="post-container" *ngIf="post.author.status !=='blocked'">
+      <div class="photo-name-date">
+        <div class="photo">
+          <img [src] = "'https://127.0.0.1:7000/' + post.author.photo">
+        </div>
+        <div class="name-date">
+          <p>{{post.author.name}}</p>
+          <p>{{post.prettyDate}}</p>
+        </div>
+      </div>
+      <div class="post-text">
+        <p>{{post.description}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

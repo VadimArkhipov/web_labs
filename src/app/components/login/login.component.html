@@ -1,0 +1,21 @@
+<div class="create-user-form-container">
+  <div class="create-user-form">
+    <div class="create-user-form-elem">
+      <input class="create-user-form-input" type="email" id="email" [(ngModel)]="email" required #userEmail="ngModel" placeholder="Введите адрес электронной почты">
+      <div [hidden]="userEmail.valid || userEmail.untouched" class="alert">
+        Не указан адрес электронной почты
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="create-user-form-elem">
+        <button class="create-user-form-input" [disabled]="userEmail.invalid"  (click)="login()"> Войти в систему </button>
+      </div>
+      <p>Или</p>
+      <div class="create-user-form-elem">
+        <button class="create-user-form-input" (click)="registration()"> Зарегистроваться </button>
+      </div>
+    </div>
+
+</div>
+</div>
+

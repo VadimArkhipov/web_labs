@@ -1,0 +1,85 @@
+.user-page-info-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.return-user-page,
+.return-user-page:active,
+.return-user-page:visited{
+  background-color: #1cd3a2;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  font-size: 20px;
+  position: relative;
+  width: 70px;
+}
+
+.return-user-page:hover{
+  text-decoration: none;
+  color: black;
+  background-color: #98ff98;
+}
+
+.user-page-image{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+}
+
+.user-page-info p{
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.user-page-info-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-page-buttons button{
+  padding: 0;
+  border: 0;
+  margin: 10px;
+}
+
+i.watch-user:hover{
+  color: white;
+}
+
+i.delete-user:hover{
+  color: white;
+}
+
+button.watch-user,
+button.delete-user{
+  padding: 0;
+  border: 0;
+}
+
+button.watch-user,
+button.delete-user{
+  padding: 0;
+  border: 0;
+}
+
+
+i {
+  background-color: #1cd3a2;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+a,
+a:visited{
+  color: black;
+}

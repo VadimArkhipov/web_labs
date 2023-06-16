@@ -1,0 +1,37 @@
+<table>
+  <thead>
+  <tr>
+    <th>Фото</th>
+    <th>ФИО</th>
+    <th>Дата рождения</th>
+    <th>E-mail</th>
+    <th>Роль</th>
+    <th>Статус</th>
+    <th>Удалить пользователя</th>
+    <th>Посмотреть профиль пользователя</th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let user of users">
+  <tr>
+    <td><img [src]="'https://127.0.0.1:7000/' + user.photo"> </td>
+    <td>{{user.name}}</td>
+    <td>{{user.birth}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.role}}</td>
+    <td>{{user.status}}</td>
+    <td>
+        <button type="button">
+          <a (click)="confirmDeleteUser(user.id, user.name)">
+            <i class="fa fa-trash"> </i>
+          </a>
+        </button>
+
+      </td>
+    <td>
+      <a [href] = "'users/' + user.id">
+        <i class="fa fa-eye fa-3x"></i>
+      </a>
+      </td>
+  </tr>
+  </tbody>
+</table>

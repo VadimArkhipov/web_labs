@@ -1,0 +1,56 @@
+<div class="create-user-form-container">
+  <div class="create-user-form">
+
+    <div class="create-user-form-elem">
+      <a class="return" href= 'users'>
+        &#60;Назад
+      </a>
+    </div>
+
+    <div class="create-user-form-elem">
+      <label for="userName"> Укажите имя пользователя </label>
+      <br>
+      <input class="create-user-form-input" type="text" name="userName" id="userName" [(ngModel)]="name" required #userName="ngModel">
+      <div [hidden]="userName.valid || userName.untouched" class="alert">
+        Не указано имя
+      </div>
+    </div>
+
+    <div class="create-user-form-elem">
+      <label for="birth"> Укажите дату рождения </label>
+      <br>
+      <input class="create-user-form-input" type = 'date' name="birth" id="birth" [(ngModel)]="birth" required #userBirth="ngModel">
+      <div [hidden]="userBirth.valid || userBirth.untouched" class="alert">
+        Не указана дата рождения
+      </div>
+    </div>
+
+    <div class="create-user-form-elem">
+      <label for="email"> Укажите адрес электронной почты </label>
+      <br>
+      <input class="create-user-form-input" type="email" id="email" [(ngModel)]="email" required #userEmail="ngModel">
+      <div [hidden]="userEmail.valid || userEmail.untouched" class="alert">
+        Не указан адрес электронной почты
+      </div>
+
+    </div>
+
+    <div class="create-user-form-elem">
+      <label for="role"> Укажите роль </label>
+      <br>
+      <select  class="create-user-form-input" name="role" id="role" [(ngModel)]="role" required #userRole="ngModel">
+        <option value="user"> Пользователь </option>
+        <option value="admin"> Администратор </option>
+      </select>
+      <div [hidden]="userRole.valid || userRole.untouched" class="alert">
+        Не указана роль пользователя
+      </div>
+    </div>
+
+
+    <div class="create-user-form-elem">
+      <button class="create-user-form-input"  [disabled]="userName.invalid || userBirth.invalid || userEmail.invalid || userRole.invalid" (click)="addUser()"> Обновить данные о пользователе</button>
+    </div>
+
+  </div>
+</div>
