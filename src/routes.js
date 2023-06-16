@@ -29,13 +29,11 @@ router.get('/users/create', (req, res) => {
 })
 
 router.post('/users', bodyParser.json(), (req, res)=>{
-    console.log('Я здесь. Щас будем постить');
     controller.createUser(req.body);
     res.status(200).send({msg:'Все прошло хорошо'});
 })
 
 router.delete('/users/:id', (req, res) => {
-    console.log('Пришли в нужный роут');
     controller.deleteUser(Number(req.params.id));
     res.status(200).send();
 })
